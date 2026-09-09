@@ -112,7 +112,7 @@ main {
     background: var(--color-background);
 }
 
-.header__logo {
+.header__logo, .card {
     color: var(--color-text-header);
     font-family: var(--font-code);
 }

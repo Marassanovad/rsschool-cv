@@ -1,5 +1,8 @@
 export const en = {
     translation: {
+        name: 'Darya',
+        surname: 'Marassanova',
+        developer: 'Developer',
         navigation: {
             about: 'About',
             projects: 'Projects',
@@ -15,6 +18,12 @@ export const en = {
             languages: 'Languages',
             languagesDescription: 'English — B2 (IELTS 5.5)<br/> Russian — Native<br/>Kazakh — B1',
             note: 'A selection of my <highlight>favorite technologies</highlight> and <highlight>tools</highlight><br/> I enjoy working with in my projects.',
-        }
+        },
+        contacts: {
+            site: 'Site',
+            description: 'Handcraft by Me /<br/> Powered by React /',
+            rsschool: 'Created as part of the RS School × EPAM program /',
+            inspiredBy: 'Design inspired by Taisia Tsyganok /',
+        },
     },
 };

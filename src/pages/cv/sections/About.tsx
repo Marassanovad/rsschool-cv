@@ -22,16 +22,17 @@ export const About = () => {
                 <div className="skills-container flex flex-col gap-6">
 
                     <div
-                        className="skills-card p-8 border-[var(--color-surface)] border rounded-3xl bg-[var(--color-text-header)]">
+                        className="card skills-card p-8 border-[var(--color-surface)] border rounded-3xl bg-[var(--color-text-header)]">
                         <h2 className="skills-header text-xl text-[var(--color-background)]">Front-End</h2>
                         <p className="skills-description text-[var(--color-background)]">
-                            React • Vue • TypeScript • JavaScript • HTML • CSS • Tailwind CSS<br/>
-                            SCSS • React Router • i18next • React Hook Form • Zod
+                            React • Vue • TypeScript • JavaScript • HTML • CSS<br/>
+                            Tailwind CSS • SCSS • React Router • i18next<br/>
+                            React Hook Form • Zod
                         </p>
                     </div>
 
                     <div className="flex justify-items-start gap-28">
-                        <div className="skills-card p-8 border-[var(--color-surface)] border rounded-3xl">
+                        <div className="card skills-card p-8 border-[var(--color-surface)] border rounded-3xl">
                             <h2 className="skills-header text-xl text-[var(--color-text)]">{t(`about.tools`)}</h2>
                             <p className="skills-description text-[var(--color-text-header)]">Git • GitHub • Vite •
                                 WebStorm<br/>VS Code • Figma • npm</p>
@@ -42,7 +43,7 @@ export const About = () => {
                         />
                     </div>
 
-                    <div className="skills-card p-8 border-[var(--color-surface)] border rounded-3xl">
+                    <div className="card skills-card p-8 border-[var(--color-surface)] border rounded-3xl">
                         <h2 className="skills-header text-xl text-[var(--color-text)]">Soft Skills</h2>
                         <p className="skills-description text-[var(--color-text-header)]">
                             <Trans i18nKey="about.softSkillsDescription"
@@ -61,7 +62,7 @@ export const About = () => {
                                            <span className="italic text-[var(--color-text-header)]"/>,
                                    }}/>
                         </p>
-                        <div className="skills-card p-8 border-[var(--color-surface)] border rounded-3xl">
+                        <div className="card skills-card p-8 border-[var(--color-surface)] border rounded-3xl">
                             <h2 className="skills-header text-xl text-[var(--color-text)]">{t(`about.languages`)}</h2>
                             <p className="skills-description text-[var(--color-text-header)]">
                                 <Trans i18nKey="about.languagesDescription"

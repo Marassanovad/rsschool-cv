@@ -1,10 +1,5 @@
 import { useTranslation } from 'react-i18next';
-
-const navigation = [
-    { key: 'about', href: '#about' },
-    { key: 'projects', href: '#projects' },
-    { key: 'contacts', href: '#contacts' },
-];
+import {navigation} from "../../types/navigation.ts";
 
 export const Header = () => {
     const { t, i18n } = useTranslation();
@@ -17,8 +12,8 @@ export const Header = () => {
         <header className="header">
             <div className="header__container flex w-screen items-center justify-between px-12 py-4">
                 <a className="header__logo flex flex-col" href="#highlights">
-                    <span>Darya</span>
-                    <span>Marassanova</span>
+                    <span>{t(`name`)}</span>
+                    <span>{t(`surname`)}</span>
                 </a>
 
                 <nav
