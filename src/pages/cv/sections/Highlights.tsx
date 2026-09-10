@@ -1,18 +1,17 @@
-//to do
-// пока пойдет. Надо еще добавить проекты
-
 import {ProjectLink} from "../../../shared/ui/Link/ProjectLink.tsx";
-import {Trans} from "react-i18next";
+import {Trans, useTranslation} from "react-i18next";
 import {links} from "../../../shared/types/links.ts";
 import {SocialLink} from "../../../shared/ui/Link/SocialLink.tsx";
 
 export const Highlights = () => {
+    const {t} = useTranslation();
+
     return (
         <section className="highlights flex flex-col justify-center items-center gap-6 pt-12">
             <div className="text-section flex flex-col justify-center items-center">
                 <div className="text-block flex items-baseline gap-24 w-[80%]">
                     <h1 className="text-[144px]">Frontend</h1>
-                    <ProjectLink text="Projects" href="https://github.com/Marassanovad"/>
+                    <ProjectLink text={t('navigation.projects')} href="https://github.com/Marassanovad"/>
                 </div>
                 <div className="text-block flex items-center gap-24 w-[80%]">
                     <p className="text-md w-1/4">
