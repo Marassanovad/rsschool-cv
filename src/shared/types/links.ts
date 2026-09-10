@@ -19,12 +19,12 @@ export const links: LinkItem[] = [
     },
     {
         key: 'Telegram',
-        href: '',
+        href: 'https://t.me/marassanovad',
         icon: TelegramIcon,
     },
     {
         key: 'LinkedIn',
-        href: '',
+        href: 'https://www.linkedin.com/in/darya-marassanova-058a02331/',
         icon: LinkedInIcon,
     },
     {
@@ -34,7 +34,7 @@ export const links: LinkItem[] = [
     },
     {
         key: 'Discord',
-        href: '',
+        href: 'https://discord.com/users/837990470659342356',
         icon: DiscordIcon,
     }
 ];

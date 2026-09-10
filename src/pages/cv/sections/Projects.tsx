@@ -9,7 +9,7 @@ export const Projects = () => {
             <h1 className="projects_header text-end text-6xl">{t(`navigation.projects`)}</h1>
             <hr className="w-full border-[var(--color-surface)]"/>
             <div className="project-cards ml-auto grid w-[80%] grid-cols-2 gap-8">
-                {projects.map(({ key, description, href }) => (
+                {projects.map(({key, description, href}) => (
                     <div
                         key={key}
                         className="project-card card flex flex-col p-8 border-[var(--color-surface)] border rounded-3xl gap-6"
@@ -31,7 +31,7 @@ export const Projects = () => {
                     </div>
                 ))}
             </div>
-
+            <hr className="w-full border-[var(--color-surface)]"/>
         </div>
     )
 }

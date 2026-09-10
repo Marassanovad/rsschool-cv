@@ -21,6 +21,15 @@ export const en = {
             languages: 'Languages',
             languagesDescription: 'English — B2 (IELTS 5.5)<br/> Russian — Native<br/>Kazakh — B1',
             note: 'A selection of my <highlight>favorite technologies</highlight> and <highlight>tools</highlight><br/> I enjoy working with in my projects.',
+            study: 'Education&Work',
+            work: 'Work',
+            courses: 'Courses',
+            education: {
+                title: 'Education',
+                satbayevSpecialization: 'Design and Technology in Mechanical Engineering',
+                college: 'College',
+                collegeSpecialization: 'Sports',
+            }
         },
         projects: {
             cabinetlyDescription: 'Authenticated personal dashboard built with Next.js (App Router, SSR, NextAuth). A production-oriented React + TypeScript project featuring protected routes and backend logic.',

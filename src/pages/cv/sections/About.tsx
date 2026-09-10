@@ -1,10 +1,32 @@
-import {Trans, useTranslation} from "react-i18next";
-import {NavigationLink} from "../../../shared/ui/Link/NavigationLink.tsx";
-import photo from "../../../shared/assets/photo.webp"
-import {GitHubIcon} from "../../../shared/ui/icons/GitHubIcon.tsx";
+import {Trans, useTranslation} from 'react-i18next';
+import {useEffect, useState} from 'react';
+
+import {NavigationLink} from '../../../shared/ui/Link/NavigationLink.tsx';
+import photo from '../../../shared/assets/photo.webp';
+import {GitHubIcon} from '../../../shared/ui/icons/GitHubIcon.tsx';
+import {courses, education, work,} from '../../../shared/types/educationAndWork.ts';
 
 export const About = () => {
     const {t} = useTranslation();
+
+    const sections = [
+        {title: 'about.work', items: work},
+        {title: 'about.education.title', items: education},
+        {title: 'about.courses', items: courses},
+    ];
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const currentSection = sections[currentIndex];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((currentIndex) => (currentIndex + 1) % sections.length);
+        }, 10000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section className="about_container">
             <div className="text-container flex justify-items-start text-start gap-[560px] pb-14">
@@ -18,7 +40,7 @@ export const About = () => {
                            }}/>
                 </p>
             </div>
-            <div className="container flex justify-between">
+            <div className="container flex justify-between gap-8">
                 <div className="skills-container flex flex-col gap-6">
 
                     <div
@@ -81,7 +103,61 @@ export const About = () => {
                         className="rounded-3xl"
                     />
                 </div>
+            </div>
 
+            <div className="study_section flex flex-col gap-6 pt-12">
+                <h2 className="text-6xl">{t('about.study')}</h2>
+
+                <h3 className="text-4xl text-[var(--color-text-header)]">
+                    {t(currentSection.title)}
+                </h3>
+
+                <div className="grid grid-cols-2 gap-8">
+                    {currentSection.items.map(
+                        ({company, date, period, specialization}) => (
+                            <div
+                                key={`${company}-${date}`}
+                                className="card rounded-3xl border border-[var(--color-surface)] p-8"
+                            >
+                                <h3 className="text-2xl text-[var(--color-text-header)]">
+                                    {t(company)}
+                                </h3>
+
+                                <ul className="mt-6 flex flex-col gap-2">
+                                    <li className="text-[var(--color-text)]">
+                                        {date}
+                                    </li>
+
+                                    {period && (
+                                        <li className="text-[var(--color-text)]">
+                                            {period}
+                                        </li>
+                                    )}
+
+                                    <li className="text-[var(--color-text-header)]">
+                                        {t(specialization)}
+                                    </li>
+                                </ul>
+                            </div>
+                        ),
+                    )}
+                </div>
+
+                <div className="flex justify-center gap-3">
+                    {sections.map((section, index) => (
+                        <button
+                            key={section.title}
+                            type="button"
+                            aria-label={section.title}
+                            onClick={() => setCurrentIndex(index)}
+                            className={`h-3 w-3 rounded-full transition-colors ${
+                                index === currentIndex
+                                    ? 'bg-[var(--color-text-header)]'
+                                    : 'bg-[var(--color-text)]'
+                            }`}
+                        />
+                    ))}
+                </div>
             </div>
         </section>
     )
