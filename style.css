@@ -44,6 +44,10 @@ body {
             background-color var(--transition-base);
 }
 
+section {
+    scroll-margin-top: var(--header-height);
+}
+
 h1,
 h2,
 h3,

@@ -2,7 +2,7 @@ import {MoveRight} from "lucide-react";
 
 type ProjectLinkProps = {
     text: string;
-    href: string;
+    href?: string;
 };
 
 export const ProjectLink = ({ text, href }: ProjectLinkProps) => {
